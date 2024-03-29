@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>request for pora buja</title>
+    <style>
+        #target{
+    position: absolute;
+    left: 200px;
+    background-color: rgb(255, 0, 0);
+    border: none;
+    width: 90px;
+    border-radius: 10px;
+    font-size: 25px;
+    padding: 8px;
+    cursor: pointer;
+    transition: top o.5s, left 0.5;
+
+}
+
+#yes{
+    position: absolute;
+    left: 50px;
+    background-color: blue;
+    border: none;
+    width: 90px;
+    border-radius: 10px;
+    font-size: 25px;
+    padding: 8px;
+    cursor: pointer;
+    transition: top o.5s, left 0.5;
+
+}
+#game-container{
+    position: relative;
+    width: 500px;
+    height: 600px;
+
+    margin: 5px;
+    overflow: hidden;
+}
+
+    </style>
+    
+</head>
+<body>
+    <div id="game-container">
+        <div class="box">
+            <h1>pora ses ni tumar ?</h1>
+            <button id="target">No</button>
+            <button id="yes">Yes</button>
+
+        </div>
+
+
+
+    </div>
+    <script>
+        const target = document.getElementById('target'); 
+        function moveTarget(){
+
+    const maxwidth =400;
+    const maxheight =400;
+
+
+    const randomX = Math.floor(Math.random() * maxwidth);
+
+    const randomY = Math.floor(Math.random() * maxheight);
+
+    target.style.left = randomX + 'px';
+    target.style.top = randomY + 'px';
+
+}
+
+target.addEventListener('mouseenter',function() {
+    moveTarget();
+
+yes.addEventListener('click', function() {
+            alert("bujaiya dew");
+        });
+
+});
+
+
+    </script>
+</body>
+</html>
